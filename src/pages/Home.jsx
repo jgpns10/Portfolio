@@ -70,7 +70,7 @@ export default function Home() {
           </div>
 
           <div>
-            <b>8+</b>
+            <b>6+</b>
             <span>Tecnologias</span>
           </div>
         </div>
