@@ -136,15 +136,19 @@ button {
     letter-spacing: -1px;
 }
 
-.brand span {
-    background: linear-gradient(90deg, var(--cyan), var(--purple));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+.brand-initials {
+    color: #ffffff;
+    font-size: 36px;
 }
 
-.brand b {
-    color: var(--pink);
+.brand-typed {
+    display: inline-block;
+    min-width: 78px;
+    margin-left: 1px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
 }
 
 .nav-links {
@@ -239,10 +243,66 @@ button {
 }
 
 .hero h1 {
-    background: linear-gradient(100deg, #fff 15%, #a78bfa 58%, #22d3ee);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    background: none;
+    color: #ffffff;
+}
+
+.intro-trigger {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.intro-trigger:hover {
+    color: var(--cyan);
+}
+
+.intro-trigger small {
+    margin-left: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.intro-chevron {
+    transition: transform 0.3s ease;
+}
+
+.intro-trigger.open .intro-chevron {
+    transform: rotate(180deg);
+}
+
+.intro-card {
+    max-height: 0;
+    padding: 0 18px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.intro-card.show {
+    max-height: 200px;
+    margin-top: 6px;
+    padding: 16px 18px;
+    opacity: 1;
+    transform: translateY(0);
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.intro-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
 }
 
 .hero h2 {
@@ -287,8 +347,15 @@ button {
 }
 
 .button.primary {
-    background: linear-gradient(120deg, var(--purple), var(--pink));
-    box-shadow: 0 14px 35px rgba(139, 92, 246, .3);
+    background: #303565;
+    color: #ffffff;
+    border: 1px solid #414979;
+    box-shadow: 0 12px 30px rgba(8, 10, 28, 0.35);
+}
+
+.button.primary:hover {
+    background: #3a4178;
+    border-color: #505991;
 }
 
 .button.secondary {
@@ -839,6 +906,32 @@ button {
     .navbar {
         height: 60px;
         border-radius: 17px;
+        position: relative;
+    }
+
+    .navbar-phrase {
+        position: absolute;
+        left: 50%;
+        display: flex;
+        width: 240px;
+        align-items: center;
+        justify-content: center;
+        color: #9ca3b8;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+
+    .navbar-phrase i {
+        width: 2px;
+        height: 15px;
+        margin-left: 4px;
+        border-radius: 2px;
+        background: var(--cyan);
+        animation: blink-cursor 0.8s infinite;
     }
 
     .menu-button {
@@ -942,4 +1035,10 @@ button {
         scroll-behavior: auto !important;
         transition-duration: .01ms !important;
     }
+}
+
+@media (max-width: 1050px) {
+  .navbar-phrase {
+    display: none;
+  }
 }

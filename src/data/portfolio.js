@@ -18,7 +18,7 @@ export const skills = [
   { name: 'JavaScript', level: 86, group: 'Front-end' },
   { name: 'React.js', level: 84, group: 'Front-end' },
   { name: 'MySQL', level: 82, group: 'Back-end' },
-  { name: 'Javascript', level: 78, group: 'Back-end' }, 
+  { name: 'Typescript', level: 78, group: 'Back-end' }, 
   { name: 'Figma', level: 80, group: 'Design' },
 ]
 
