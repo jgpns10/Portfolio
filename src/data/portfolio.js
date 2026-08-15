@@ -15,11 +15,11 @@ export const profile = {
 export const skills = [
   { name: 'HTML5', level: 92, group: 'Front-end' },
   { name: 'CSS3', level: 90, group: 'Front-end' },
-  { name: 'JavaScript', level: 86, group: 'Front-end' },
-  { name: 'React.js', level: 84, group: 'Front-end' },
-  { name: 'MySQL', level: 82, group: 'Back-end' },
-  { name: 'Typescript', level: 78, group: 'Back-end' }, 
+  { name: 'MySQL', level: 84, group: 'Back-end' },
+  { name: 'JavaScript', level: 82, group: 'Front-end' },
   { name: 'Figma', level: 80, group: 'Design' },
+  { name: 'React.js', level: 74, group: 'Front-end' },
+  { name: 'Typescript', level: 68, group: 'Back-end' }, 
 ]
 
 export const projects = [
